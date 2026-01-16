@@ -2,9 +2,10 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chrome Hearts Inspiracija</title>
     <style>
-        /* --- Tema: Chrome Hearts --- */
+
         body {
             font-family: 'Arial Black', Arial, sans-serif;
             background-color: #111;
@@ -32,7 +33,7 @@
             color: #ccc;
         }
 
-        /* --- Galerija slika --- */
+
         #tema .galerija {
             display: flex;
             justify-content: center;
@@ -41,7 +42,7 @@
             padding: 40px;
         }
 
-        /* selektor koji cilja sve slike u galeriji */
+
         #tema .galerija img {
             width: 200px;
             height: 200px;
@@ -52,43 +53,43 @@
             transition: transform 0.3s ease;
         }
 
-        /* animacija slike pri hoveru */
+
         #tema .galerija img:hover {
             animation: zoom 1s infinite alternate;
         }
 
-        /* pseudo-selektor koji cilja drugi element u galeriji */
+
         #tema .galerija img:nth-child(2) {
             border-color: #ff00ff;
             animation: blink 2s infinite alternate;
         }
 
-        /* :nth-of-type() pseudo-selektor */
+
         #tema .galerija img:nth-of-type(3) {
             border-color: red;
             transform: rotate(-3deg);
         }
 
-        /* složeni selektor: direktno dijete */
+
         #tema > .intro p {
             font-size: 20px;
             line-height: 1.6;
             color: #eee;
         }
 
-        /* adjacent sibling selector (+) */
+
         #tema .intro .prvi + .drugi {
             color: #ff00ff;
             font-style: italic;
         }
 
-        /* general sibling selector (~) */
+
         #tema .intro .prvi ~ .treci {
             text-decoration: underline;
             color: #aaa;
         }
 
-        /* animacije */
+
         @keyframes zoom {
             0% { transform: scale(1); }
             100% { transform: scale(1.1); }
@@ -100,7 +101,7 @@
             100% { opacity: 1; }
         }
 
-        /* dodatni styling za tekst ispod galerije */
+
         #tema .intro {
             text-align: center;
             padding: 20px 40px;
@@ -109,6 +110,48 @@
         #tema .intro span {
             color: #ff00ff;
             font-weight: bold;
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 20px 10px;
+            }
+
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+ 
+            #tema .galerija {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 10px;
+                gap: 15px;
+            }
+
+            #tema .galerija img {
+                width: 90%;
+                height: auto;
+                border-width: 2px;
+            }
+
+        
+            #tema .intro {
+                padding: 15px 10px;
+            }
+
+            #tema .intro p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
         }
     </style>
 </head>
@@ -149,3 +192,4 @@
     </div>
 </body>
 </html>
+
