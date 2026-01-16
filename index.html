@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chrome Hearts Inspiracija</title>
+    <style>
+        /* --- Tema: Chrome Hearts --- */
+        body {
+            font-family: 'Arial Black', Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #222;
+        }
+
+        header h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 48px;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        /* --- Galerija slika --- */
+        #tema .galerija {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+
+        /* selektor koji cilja sve slike u galeriji */
+        #tema .galerija img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        /* animacija slike pri hoveru */
+        #tema .galerija img:hover {
+            animation: zoom 1s infinite alternate;
+        }
+
+        /* pseudo-selektor koji cilja drugi element u galeriji */
+        #tema .galerija img:nth-child(2) {
+            border-color: #ff00ff;
+            animation: blink 2s infinite alternate;
+        }
+
+        /* :nth-of-type() pseudo-selektor */
+        #tema .galerija img:nth-of-type(3) {
+            border-color: red;
+            transform: rotate(-3deg);
+        }
+
+        /* složeni selektor: direktno dijete */
+        #tema > .intro p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #eee;
+        }
+
+        /* adjacent sibling selector (+) */
+        #tema .intro .prvi + .drugi {
+            color: #ff00ff;
+            font-style: italic;
+        }
+
+        /* general sibling selector (~) */
+        #tema .intro .prvi ~ .treci {
+            text-decoration: underline;
+            color: #aaa;
+        }
+
+        /* animacije */
+        @keyframes zoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* dodatni styling za tekst ispod galerije */
+        #tema .intro {
+            text-align: center;
+            padding: 20px 40px;
+        }
+
+        #tema .intro span {
+            color: #ff00ff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="tema">
+
+        <header>
+            <h1>Chrome Hearts Style</h1>
+            <p>Known for handmade, high-quality production</p>
+        </header>
+
+
+        <div class="intro">
+            <p class="prvi">
+                Chrome Hearts is a luxury brand founded in Los Angeles, recognized for its bold gothic aesthetics,
+                handcrafted silver jewelry, leather goods, and strong connection to rock and biker culture.
+                <span>Authenticity and craftsmanship</span> remain at the core of its identity.
+            </p>
+
+            <p class="drugi">
+                The brand gained global recognition through collaborations with musicians, artists, and fashion designers,
+                maintaining an exclusive and rebellious image.
+            </p>
+
+            <p class="treci">
+                Despite its luxury status, Chrome Hearts continues to resist mass production, focusing on individuality,
+                high-quality materials, and timeless design.
+            </p>
+        </div>
+
+
+        <div class="galerija">
+            <img src="slika1.jpg" alt="Slika 1">
+            <img src="slika2.jpg" alt="Slika 2">
+            <img src="slika3.jpg" alt="Slika 3">
+            <img src="slika4.jpg" alt="Slika 4">
+        </div>
+    </div>
+</body>
+</html>
